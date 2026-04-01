@@ -55,6 +55,7 @@ local ThemeManager = {} do
 	ThemeManager.Library = nil
 	ThemeManager.BuiltInThemes = {
 		['cumyin.pro']     = { 1, { FontColor = "ffffff", MainColor = "090909", AccentColor = "7764c5", BackgroundColor = "090909", OutlineColor = "0f0f0f" } },
+        ['cumyin.pro WHITE']     = { 1, { FontColor = "ffffff", MainColor = "000000", AccentColor = "ffffff", BackgroundColor = "000000", OutlineColor = "0e0e0e" } },
 		['BBot']          = { 3, { FontColor = "ffffff", MainColor = "1e1e1e", AccentColor = "7e48a3", BackgroundColor = "232323", OutlineColor = "141414" } },
 		['Fatality']      = { 4, { FontColor = "ffffff", MainColor = "1e1842", AccentColor = "c50754", BackgroundColor = "191335", OutlineColor = "3c355d" } },
 		['Jester']        = { 5, { FontColor = "ffffff", MainColor = "242424", AccentColor = "db4467", BackgroundColor = "1c1c1c", OutlineColor = "373737" } },
