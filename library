@@ -91,7 +91,7 @@ local Tooltips = {}
 local Dialogues = {}
 
 -- https://github.com/deividcomsono/Obsidian/blob/main/Library.lua#L30
-local BaseURL = "https://raw.githubusercontent.com/mstudio45/LinoriaLib/refs/heads/main/"
+local BaseURL = "https://github.com/violin-suzutsuki/LinoriaLib/blob/main/Library.lua"
 local CustomImageManager = {}
 local CustomImageManagerAssets = {
     Cursor = {
