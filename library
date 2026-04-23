@@ -90,21 +90,8 @@ local Tooltips = {}
 local Dialogues = {}
 
 -- https://github.com/deividcomsono/Obsidian/blob/main/Library.lua#L30
-local BaseURL = "https://github.com/violin-suzutsuki/LinoriaLib/blob/main/Library.lua"
-
--- Override the asset loading to use direct rbxassetids (no getcustomasset)
-local CustomImageManager = Library.ImageManager
-CustomImageManager.GetAsset = function(assetName)
-    local assets = {
-        Cursor = "rbxassetid://9619665977",
-        DropdownArrow = "rbxassetid://6282522798",
-        Checker = "rbxassetid://12977615774",
-        CheckerLong = "rbxassetid://12978095818",
-        SaturationMap = "rbxassetid://4155801252"
-    }
-    return assets[assetName] or ""
-end
-
+local BaseURL = "https://github.com/deividcomsono/Obsidian/blob/main/Library.lua#L30"
+local CustomImageManager = {}
 local CustomImageManagerAssets = {
     Cursor = {
         RobloxId = 9619665977,
