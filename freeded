@@ -1,12 +1,5 @@
 --[[
-    scoot ui library
-    made by samet
-    
-    https://discord.gg/VhvTd5HV8d
-    ^^ join for custom commissions
-
-    example/documentation is at the bottom
-    date: 19.07.2025
+scoot ui library for cumyin cock fuck i see you there >:)
 ]]
 
 if Library then
@@ -84,9 +77,9 @@ local Library do
         FadeSpeed = 0.2,
 
         Folders = {
-            Directory = "scoot",
-            Configs = "scoot/Configs",
-            Assets = "scoot/Assets",
+            Directory = "cumyinDZC",
+            Configs = "cumyinDZC/Configs",
+            Assets = "cumyinDZC/Assets",
         },
 
         Images = {
