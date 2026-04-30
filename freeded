@@ -77,9 +77,9 @@ local Library do
         FadeSpeed = 0.2,
 
         Folders = {
-            Directory = "cumyinDZC",
-            Configs = "cumyinDZC/Configs",
-            Assets = "cumyinDZC/Assets",
+            Directory = "cumyinDeadzone",
+            Configs = "cumyinDeadzone/Configs",
+            Assets = "cumyinDeadzone/Assets",
         },
 
         Images = {
