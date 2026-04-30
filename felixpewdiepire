@@ -1,6 +1,5 @@
-
 --[[
-scoot ui library for cumyin cock fuck i see you there >:)
+scoot ui library for cumyV2in cock fuck i see you there >:)
 ]]
 
 if Library then
@@ -220,11 +219,9 @@ local Library do
     Library.Theme = TableClone(Themes["Preset"])
 
     -- Folders
-    for Index, Value in Library.Folders do 
-        if not isfolder(Value) then
-            makefolder(Value)
-        end
-    end
+    if not isfolder(Library.Folders.Directory) then makefolder(Library.Folders.Directory) end
+    if not isfolder(Library.Folders.Configs) then makefolder(Library.Folders.Configs) end
+    if not isfolder(Library.Folders.Assets) then makefolder(Library.Folders.Assets) end
 
     -- Images
     for Index, Value in Library.Images do 
@@ -861,29 +858,28 @@ local Library do
         end
     end
 
+    local CurrentConfigs = { }
     Library.RefreshConfigsList = function(self, Element)
-        local CurrentList = { }
         local List = { }
 
-        local ConfigFolderName = StringGSub(Library.Folders.Configs, Library.Folders.Directory .. "/", "")
-
-        for Index, Value in listfiles(Library.Folders.Configs) do
-            local FileName = StringGSub(Value, Library.Folders.Directory .. "\\" .. ConfigFolderName .. "\\", "")
-            List[Index] = FileName
+        for _, Value in listfiles(Library.Folders.Configs) do
+            local FileName = Value:gsub(".*[\\/]", "")
+            TableInsert(List, FileName)
         end
 
-        local IsNew = #List ~= CurrentList
-
+        local IsNew = #List ~= #CurrentConfigs
         if not IsNew then
             for Index = 1, #List do
-                if List[Index] ~= CurrentList[Index] then
+                if List[Index] ~= CurrentConfigs[Index] then
                     IsNew = true
                     break
                 end
             end
-        else
-            CurrentList = List
-            Element:Refresh(CurrentList)
+        end
+
+        if IsNew then
+            CurrentConfigs = List
+            Element:Refresh(List)
         end
     end
 
